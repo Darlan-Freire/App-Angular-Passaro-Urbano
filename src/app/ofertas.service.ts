@@ -1,7 +1,7 @@
 import { Oferta } from "./shared/oferta.model"
 
 export class OfertasService {
-  
+
   public ofertas: Array<Oferta> = [
     {
       id: 1,
@@ -51,7 +51,7 @@ export class OfertasService {
       ]
     }
   ]
-  
+
   public getOfertas(): Array<Oferta> {
     return this.ofertas
   }

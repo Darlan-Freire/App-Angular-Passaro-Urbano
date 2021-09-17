@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnChanges } from '@angular/core';
 import { OfertasService } from '../ofertas.service'
 import { Oferta } from '../shared/oferta.model';
 
@@ -11,12 +11,17 @@ import { Oferta } from '../shared/oferta.model';
 export class HomeComponent implements OnInit {
 
   public ofertas: Array<Oferta>
-  
+
   constructor(private ofertaService: OfertasService) {}
 
   ngOnInit(): void {
     this.ofertas = this.ofertaService.getOfertas()
     console.log(this.ofertas)
+  }
+
+  public clickOfertas(): void {
+    //console.log("Clique de ofertas")
+    console.log(this.ofertas[0])
   }
 
 }
